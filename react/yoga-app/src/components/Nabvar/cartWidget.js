@@ -1,15 +1,11 @@
 import React from "react";
+import Carrito from "./files/carrito.png"
 
-const cartWidget = () => {
+const CartWidget = () => {
     return (
-        <div>
-            <ul>
-                <li> <img src="./files/carrito.png" alt="logo" width="40px"></img> </li>
-            </ul>
-        </div>
-       
+        <li> <img src= { Carrito } alt="logo" width="40px"></img> </li>
     )
 }
 
 
-export default cartWidget
+export default CartWidget

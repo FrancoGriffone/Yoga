@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import cartWidget from "./cartWidget.js";
+import CartWidget from "./CartWidget.js";
 
 const Navbar = () => {
     return (
@@ -34,11 +34,8 @@ const Navbar = () => {
               Contacto
             </a>
           </li>
-          <li>
-          <img src="../files/carrito" alt="logo" width="40px"></img>
-          </li>
+          <CartWidget />
         </ul>
-        {/* <cartWidget /> */}
         </div>
       </nav>
     );
