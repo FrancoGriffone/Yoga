@@ -1,7 +1,7 @@
 import './App.css';
-import Navbar from './components/Nabvar/Navbar';
-import {ItemListContainer} from './components/Nabvar/ItemListContainer';
-import ItemCount  from './components/Nabvar/ItemCount';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from './components/Nabvar/navbar';
+import {ItemListContainer} from './components/Nabvar/itemListContainer';
 
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
       </header>
       <section>
         <ItemListContainer />
-        <ItemCount stock={5} initial={1} />
       </section>
     </div>
   );
