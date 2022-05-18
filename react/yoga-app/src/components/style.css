@@ -1,0 +1,125 @@
+.clase-navbar {
+    background-color: rgba(247, 121, 230, 0.329);
+    padding: 8px 16px;
+  }
+  
+  .clase-navbar div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  .lista2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .clase-navbar ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .clase-navbar ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* sección primera */
+
+  /* <a href="https://ibb.co/5r4nLBJ"><img src="https://i.ibb.co/ZBXYxWb/close-up-woman-meditating-on-yoga-mat.jpg" alt="close-up-woman-meditating-on-yoga-mat" border="0"></a> */
+.seccionUno {
+  background: url(https://i.ibb.co/ZBXYxWb/close-up-woman-meditating-on-yoga-mat.jpg);
+  background-size:cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.titulo , .subTitulo {
+  color: whitesmoke;
+  margin-right: 100px;
+}
+
+.titulo {
+  font-size: 60px;
+}
+
+.subTitulo {
+  font-size: x-large;
+}
+
+  /* sección intermedia */
+
+.seccionIntermedia {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.seccionIntermedia h2 {
+  color: rgb(231, 118, 137);
+}
+
+  /* seccion segunda */
+
+  /*<a href="https://ibb.co/YBRJgMy"><img src="https://i.ibb.co/fd1ZJ5n/dried-flower-window-shadow-floral-image.jpg" alt="dried-flower-window-shadow-floral-image" border="0"></a>*/
+.seccionDos {
+  background: url(https://i.ibb.co/fd1ZJ5n/dried-flower-window-shadow-floral-image.jpg);
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+  /* seccion tercera */
+
+.itemList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 40%;
+  
+}
+
+  /* footer style */
+
+.footerContenedor {
+  padding: 40px;
+  background-color: rgba(247, 121, 230, 0.329);
+  display: flex;
+  flex-direction: column;
+}
+
+.footerInicio {
+  text-decoration: none;
+  color: #212529;
+}
+
+.guiaDatos h3, .derechosReservados h4{
+  font-size: large;
+  margin: 15px 0px 10px 0px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  margin-top: 10px;
+}
+
+.facebook:hover , .instagram:hover, .whatsapp:hover {
+  transition: all 1.5s;
+  transform: scale(2);
+}

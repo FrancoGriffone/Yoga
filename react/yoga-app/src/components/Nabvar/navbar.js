@@ -1,12 +1,12 @@
 import React from 'react';
-import './style.css';
+import '../style.css';
 import CartWidget from "./cartWidget.js";
 
 const Navbar = () => {
     return (
       <nav className="clase-navbar">
         <div>
-        <ul className="lista1">
+        <ul className="lista1" id='inicio'>
             <li>
                 <a href="/">
                     Namasté
