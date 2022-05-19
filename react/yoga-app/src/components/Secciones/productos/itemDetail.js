@@ -4,23 +4,30 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import {Item} from "./Item";
 
-const itemDetail = () => {
+
+  // {items.map((item) => (
+  //   <Item item={item} />
+  // ))}
+
+
+const ItemDetail = () => {
   return (
     <Card sx={{ maxWidth: 500 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="500"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          height="400"
+          image={Item.image}
+          alt={Item.description}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {item.title}
+            {Item.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {item.fullDescription}
+            {Item.fullDescription}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -33,4 +40,4 @@ const itemDetail = () => {
   );
 }
 
-export default itemDetail
+export default ItemDetail

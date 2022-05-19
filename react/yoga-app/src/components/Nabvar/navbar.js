@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style.css';
-import CartWidget from "./cartWidget.js";
+import CartWidget from "./CartWidget.js";
 
 const Navbar = () => {
     return (
@@ -20,7 +20,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="/" title="Descubre la variedad de productos que comercializamos">
+            <a href="#productos" title="Descubre la variedad de productos que comercializamos">
               Productos
             </a>
           </li>
@@ -30,7 +30,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="/" title="Entra en contacto conmigo">
+            <a href="#redes" title="Entra en contacto conmigo">
               Contacto
             </a>
           </li>

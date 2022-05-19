@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { itemDetail }  from "./itemDetail";
+import ItemDetail from "./ItemDetail";
 import  { Data }  from "../../../data/Data";
 
-export const itemDetailContainer = () => {
+export const ItemDetailContainer = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export const itemDetailContainer = () => {
     });
   }, []);
 
-  return <itemDetail items={items} />;
+  return <ItemDetail items={items} />;
 };
 
-export default itemDetailContainer;
+export default ItemDetailContainer;

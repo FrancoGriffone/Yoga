@@ -1,11 +1,11 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/style.css"
-import Navbar from './components/Nabvar/navbar';
-import PrimeraSeccion from "./components/Secciones/portada/primeraSeccion"
-import {ItemListContainer} from './components/Secciones/productos/itemListContainer';
-import Footer from "./components/Footer/footer"
-import SegundaSeccion from './components/Secciones/fraseEmblema/segundaSeccion';
+import Navbar from './components/Nabvar/Navbar';
+import PrimeraSeccion from "./components/Secciones/portada/PrimeraSeccion"
+import {ItemListContainer} from './components/Secciones/productos/ItemListContainer';
+import Footer from "./components/Footer/Footer"
+import SegundaSeccion from './components/Secciones/fraseEmblema/SegundaSeccion';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <section>
         <SegundaSeccion />
       </section>
-      <section className='itemListContainer'>
+      <section className='itemListContainer' id='productos'>
         <ItemListContainer />
       </section>
       <section>

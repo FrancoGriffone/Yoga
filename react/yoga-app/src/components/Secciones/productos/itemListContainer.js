@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ItemList } from "./itemList";
+import { ItemList } from "./ItemList";
 import  { Data }  from "../../../data/Data";
 
 export const ItemListContainer = () => {

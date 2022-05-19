@@ -12,12 +12,11 @@ const Footer = () => {
           <img src= {  Yoga  } alt="logo" width="60px"></img>
         </div>
         <div className="guiaDatos">
-            <a href="#inicio" className="footerInicio"><h3>Inicio</h3></a>
+            <h3><a href="#inicio" className="footerInicio">Inicio</a></h3>
             <h3>Productos</h3>
             <h3>Sobre mí</h3>
-            <h3>Contacto</h3>
         </div>
-        <div className="redes">
+        <div className="redes" id="redes">
             <img src= { Facebook } alt="logo" width="30px" className="facebook"></img>
             <img src= { Instagram } alt="logo" width="30px" className="instagram"></img>
             <img src= { Whatsapp } alt="logo" width="30px" className="whatsapp"></img>
