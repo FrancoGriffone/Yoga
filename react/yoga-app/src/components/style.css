@@ -1,3 +1,5 @@
+/* Nabvar style */
+
 .clase-navbar {
     background-color: rgba(247, 121, 230, 0.329);
     padding: 8px 16px;
@@ -15,6 +17,7 @@
 
   .lista2 {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     flex-direction: row;
     gap: 16px;

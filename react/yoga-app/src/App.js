@@ -1,11 +1,11 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/style.css"
-import Navbar from './components/Nabvar/Navbar';
-import PrimeraSeccion from "./components/Secciones/portada/PrimeraSeccion"
-import {ItemListContainer} from './components/Secciones/productos/ItemListContainer';
-import Footer from "./components/Footer/Footer"
-import SegundaSeccion from './components/Secciones/fraseEmblema/SegundaSeccion';
+import Navbar from './components/Nabvar/Navbar1';
+import PrimeraSeccion from "./components/Secciones/portada/PrimeraSeccion1"
+import {ItemListContainer} from './components/Secciones/productos/ItemListContainer1';
+import Footer from "./components/Footer/Footer1"
+import SegundaSeccion from './components/Secciones/fraseEmblema/SegundaSeccion1';
 
 
 function App() {
