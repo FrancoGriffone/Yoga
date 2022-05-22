@@ -1,36 +1,37 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/style.css"
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+/*Components*/
 import Navbar from './components/Nabvar/Navbar';
 import PrimeraSeccion from "./components/Secciones/portada/PrimeraSeccion"
 import {ItemListContainer} from './components/Secciones/productos/ItemListContainer';
 import Footer from "./components/Footer/Footer"
 import SegundaSeccion from './components/Secciones/fraseEmblema/SegundaSeccion';
+import { ItemDetailContainer } from './components/Secciones/productos/ItemDetailContainer';
 
 
-function App() {
+
+export default function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="">
-        <Navbar />
-      </header>
-      <section>
-        <PrimeraSeccion />
-      </section>
+      <Navbar />
+      <PrimeraSeccion />
       <section className='seccionIntermedia'>
         <h2>Un viaje de ida que promete cambiar tu vida</h2>
       </section>
-      <section>
-        <SegundaSeccion />
-      </section>
-      <section className='itemListContainer' id='productos'>
-        <ItemListContainer />
-      </section>
-      <section>
-        <Footer />
-      </section>
-    </div>
+      <SegundaSeccion /> 
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/product/:itemId" element={<ItemDetailContainer />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
-export default App;
+
