@@ -16,16 +16,15 @@ export const ItemDetail = ({
   image,
   description,
   fullDescription,
-  stock
+  stock,
+  price
 }) => {
   const [comprado, setComprado] = useState(false);
 
   const onAdd = (value) => {
-    // value lo vamos a usar despues para el context!
-    // seria el valor del contador :)
+
     setComprado(true);
-    console.log(value); //este es el valor que viene del ItemCount
-    //vamos a poder ejecutar aca una funcion del context a la que le pasamos el item y esa cantidad del ItemCount
+    console.log(value);
   };
     return (
         <div className='cardDetail'>
@@ -44,17 +43,15 @@ export const ItemDetail = ({
               <Typography variant="body2" color="text.secondary">
                 {fullDescription}
               </Typography>
+              <Typography gutterBottom variant="h5" component="div">
+                <p>${price}</p>
+              </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Añadir al carrito
-            </Button>
-          </CardActions>
         </Card>
-        <div style={{ display: 'flex', justifyContent: 'center' , flexDirection: 'column'}}>
+        <div style={{ display: 'flex', justifyContent: 'center' , flexDirection: 'column', marginTop: "3%"}}>
         {comprado ? (
-          <Link to="/cart">Terminar compra</Link>
+          <Link to="/">Volver a los productos</Link>
         ) : (
           <ItemCount stock={stock} initial={1} onAdd={onAdd} />
         )}

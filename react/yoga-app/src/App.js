@@ -10,12 +10,15 @@ import {ItemListContainer} from './components/Secciones/productos/ItemListContai
 import Footer from "./components/Footer/Footer"
 import SegundaSeccion from './components/Secciones/fraseEmblema/SegundaSeccion';
 import { ItemDetailContainer } from './components/Secciones/productos/ItemDetailContainer';
+import { CartProvider } from './Context/CartContext';
 
 
-ssds
+
+
 export default function App() {
   return (
     <BrowserRouter>
+    <CartProvider>
     <div className="App">
       <Navbar />
       <PrimeraSeccion />
@@ -30,6 +33,7 @@ export default function App() {
       </Routes>
       <Footer />
       </div>
+    </CartProvider>
     </BrowserRouter>
   );
 }
