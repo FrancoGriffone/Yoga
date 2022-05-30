@@ -2,11 +2,8 @@ import React,  { useContext } from "react";
 import {Context} from "../../../../Context/Context"
 import { Link } from "react-router-dom";
 
-const Cart = ( ) =>{
-
-    const {cart, removeItem, totalDeCompra, vaciarCart } = useContext(Context)
-
-   
+const Cart = () => {
+const {cart, removeItem, totalDeCompra, vaciarCart } = useContext(Context)
     
     return(
         <>  
@@ -17,9 +14,9 @@ const Cart = ( ) =>{
                                             <div>¡Al parecer tu carrito se encuentra vacio!</div>
                                         </div>
                                 </div>) : cart.map((items) => {
-                return  <div key={items.id}>                                      
+                return  <div key={items.title}>                                      
                             <div>  
-                                <img src={items.image} alt={items.id} />
+                                <img src={items.image} alt={items.title} />
                                     <div>
                                         <div>{items.title}</div>
                                         <div>Cantidad: {items.quantity}</div>
