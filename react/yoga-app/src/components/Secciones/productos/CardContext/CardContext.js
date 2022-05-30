@@ -1,12 +1,12 @@
 import React,  { useContext } from "react"; 
-import {CartContext} from '../../../Context/CartContext'
+import {Context} from '../../../../Context/Context'
 import { Link } from "react-router-dom";
 
 
-const CardWidget = () => {
+const CardContext = () => {
 
     
-    const { itemsTotal } = useContext(CartContext)
+    const { itemsTotal } = useContext(Context)
     
 
     return(
@@ -24,4 +24,4 @@ const CardWidget = () => {
     
 }
 
-export default CardWidget
+export default CardContext

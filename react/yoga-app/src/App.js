@@ -10,7 +10,7 @@ import {ItemListContainer} from './components/Secciones/productos/ItemListContai
 import Footer from "./components/Footer/Footer"
 import SegundaSeccion from './components/Secciones/fraseEmblema/SegundaSeccion';
 import { ItemDetailContainer } from './components/Secciones/productos/ItemDetailContainer';
-import { CartProvider } from './Context/CartContext';
+import { CartProvider } from './Context/Context';
 
 
 

@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from 'react'
 import Data from "../data/Data"
 
-export const CartContext = createContext({})
+export const Context = createContext({})
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
@@ -57,7 +57,7 @@ export const CartProvider = ({ children }) => {
   const vaciarCart=()=> setCart([])
   
   return(
-    <CartContext.Provider
+    <Context.Provider
       value={{
         addItemToCart,
         cart,
@@ -67,6 +67,6 @@ export const CartProvider = ({ children }) => {
         vaciarCart
       }}>
       {children}
-    </CartContext.Provider>
+    </Context.Provider>
     )
 }
