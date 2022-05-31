@@ -21,7 +21,7 @@ export const ItemDetail = ({
 }) => {
   const [comprado, setComprado] = useState(false);
 
-  const onAdd = (value) => {
+  const itemAdd = (value) => {
 
     setComprado(true);
     console.log(value);
@@ -53,7 +53,7 @@ export const ItemDetail = ({
         {comprado ? (
           <Link to="/">Volver a los productos</Link>
         ) : (
-          <ItemCount stock={stock} initial={1} onAdd={onAdd} />
+          <ItemCount stock={stock} initial={1} itemAdd={itemAdd} />
         )}
         </div>
         </div>
