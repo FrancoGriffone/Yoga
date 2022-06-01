@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { CardActionArea } from '@mui/material';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
@@ -21,10 +21,9 @@ export const ItemDetail = ({
 }) => {
   const [comprado, setComprado] = useState(false);
 
-  const itemAdd = (value) => {
+  const itemAdd = (item) => {
 
     setComprado(true);
-    console.log(value);
   };
     return (
         <div className='cardDetail'>

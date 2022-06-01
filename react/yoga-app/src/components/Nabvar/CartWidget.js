@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import * as React from 'react';
 import Carrito from "./files/carrito.png"
 import Cart from "../Secciones/productos/Cart/Cart"
-import {Context} from "../../Context/Context"
-// import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
 const style = {
@@ -24,7 +21,6 @@ const CartWidget = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const { itemsTotal } = useContext(Context);
 
 
   return (

@@ -1,40 +1,45 @@
 import React,  { useContext } from "react"; 
 import {Context} from "../../../../Context/Context"
 import { Link } from "react-router-dom";
+import { Data } from "../../../../data/Data";
+import { useParams } from "react-router-dom";
 
 
 
 const Cart = () => {
 const {cart, removeItem, totalDeCompra, vaciarCart } = useContext(Context)
 
+// const { itemId } = useParams();
+
+// const myData = Data.find((items) => items.id === itemId);
+// console.log (cart)
 
 return(
     <>  
-            <div className="titleCart">Este es tu carrito!</div>
-                {cart.length === 0 ? (<div className="cartVacio">
-                                        <div className="imgCartVacio"></div>
+            <div>¡Este es tu carrito!</div>
+                {cart.length === 0 ? (<div>
                                         <div>
-                                            <div className="titleCartVacio">Al parecer tu carrito se encuentra vacio!</div>
+                                            <div>¡Al parecer tu carrito se encuentra vacio!</div>
                                         </div>
                                     </div>) : cart.map((items) => {
 
-                    return <div key={items.id} className="productInCart">                                      
-                                    <div className="cardCart">  
+                    return <div key={items.id}>                                      
+                                    <div>  
                                         <img src={items.image} alt={items.id} />
-                                        <div className="cardProductBody">
-                                            <div className="productTitle">{items.title}</div>
+                                        <div>
+                                            <div>{items.title}</div>
                                             <div>Cantidad: {items.quantity}</div>
                                             <div>Precio Unitario ${items.price}</div>
                                             <div>Total = ${items.price*items.quantity}</div>
                                         </div>
-                                        <div id={items.id} onClick={removeItem} className="far fa-trash-alt removeItem"></div>
+                                        <div id={items.id} onClick={ removeItem }></div>
                                     </div>                           
                         </div>
                 }
                 )
                 }
 
-                { cart.length !== 0  ? <div className="pt-5 productInCart">
+                { cart.length !== 0  ? <div>
                                             <div>
                                                 TOTAL DE SU COMPRA $ {totalDeCompra}.
                                             </div>
@@ -46,9 +51,8 @@ return(
        
 
     </> 
+    
 )
 
 }
-
-console.log ()
 export default Cart

@@ -4,6 +4,7 @@ import { Context } from '../../../Context/Context';
 import {Link} from "react-router-dom";
 import "./ItemCount/style.css"
 
+
 const ItemCount = ({ stock, initial, itemAdd}) =>{
 
     
@@ -21,7 +22,7 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
   return (
 
       <>
-          <div className="counterContainer">
+          <div>
               {add ? (<>
                   <div className='addCarrito'>Producto Agregado al carrito</div>
                   <div>
@@ -50,23 +51,6 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
   )
 
 }
-/* export const ItemCount = ({ stock, initial, onAdd }) => {
-  const [counter, setCounter] = useState(initial);
-
-  return (
-    <>
-      <button onClick={() => counter > initial && setCounter(counter - 1)}>
-        -
-      </button>
-      {counter}
-      <button onClick={() => counter < stock && setCounter(counter + 1)}>
-        +
-      </button>
-
-      <Button onClick={onAdd}>Agregar al carrito</Button>
-    </>
-  );
-}; */
 
 
 export default ItemCount
