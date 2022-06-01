@@ -12,7 +12,7 @@ const {cart, removeItem, totalDeCompra, vaciarCart } = useContext(Context)
 // const { itemId } = useParams();
 
 // const myData = Data.find((items) => items.id === itemId);
-// console.log (cart)
+// console.log (myData)
 
 return(
     <>  
