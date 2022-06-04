@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import "./style.css"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
-
-
-
+import { Context } from '../../../Context/Context';
+import { Link, useParams } from 'react-router-dom';
+import { Data } from '../../../data/Data';
 
 export const ItemDetail = ({
   title,
@@ -21,9 +20,17 @@ export const ItemDetail = ({
 }) => {
   const [comprado, setComprado] = useState(false);
 
-  const itemAdd = (item) => {
+  const {addItemToCart} = useContext(Context);
 
-    setComprado(true);
+  const { itemId } = useParams();
+
+  const myData = Data.find((item) => item.id === itemId);
+
+  const items = myData
+
+  const onAdd = (value) => {
+      addItemToCart(items, value)
+      setComprado (true);
   };
     return (
         <div className='cardDetail'>
@@ -48,13 +55,11 @@ export const ItemDetail = ({
             </CardContent>
           </CardActionArea>
         </Card>
-        <div style={{ display: 'flex', justifyContent: 'center' , flexDirection: 'column', marginTop: "3%"}}>
         {comprado ? (
-          <Link to="/">Volver a los productos</Link>
+          <Link className='addCarrito' to="/cart">Ver otros productos</Link>
         ) : (
-          <ItemCount stock={stock} initial={1} itemAdd={itemAdd} />
+          <ItemCount stock={stock} initial={1} onAdd={onAdd} />
         )}
-        </div>
         </div>
       );
     }

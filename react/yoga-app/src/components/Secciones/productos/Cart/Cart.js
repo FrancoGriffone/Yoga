@@ -1,18 +1,14 @@
 import React,  { useContext } from "react"; 
 import {Context} from "../../../../Context/Context"
 import { Link } from "react-router-dom";
-import { Data } from "../../../../data/Data";
-import { useParams } from "react-router-dom";
+import CardContext from "../CardContext/CardContext";
+
 
 
 
 const Cart = () => {
 const {cart, removeItem, totalDeCompra, vaciarCart } = useContext(Context)
 
-// const { itemId } = useParams();
-
-// const myData = Data.find((items) => items.id === itemId);
-// console.log (myData)
 
 return(
     <>  
@@ -25,7 +21,7 @@ return(
 
                     return <div key={items.id}>                                      
                                     <div>  
-                                        <img src={items.image} alt={items.id} />
+                                        <img src={items.image} alt={items.id} width="40px"/>
                                         <div>
                                             <div>{items.title}</div>
                                             <div>Cantidad: {items.quantity}</div>
@@ -41,7 +37,8 @@ return(
 
                 { cart.length !== 0  ? <div>
                                             <div>
-                                                TOTAL DE SU COMPRA $ {totalDeCompra}.
+                                                <p>TOTAL DE SU COMPRA $ {totalDeCompra}</p>
+                                                <p>Total de productos= <CardContext /></p>
                                             </div>
                                             <div className="d-flex">
                                                 <button className="btn btn-danger me-4" onClick={ vaciarCart } >Vaciar Carrito</button>
