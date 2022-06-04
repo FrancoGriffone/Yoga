@@ -10,11 +10,7 @@ const CardContext = () => {
             
         return(
                 <>
-                    <div id="carrito" className="carrito">
-                            <div className="bag">
-                                    <div className="totalArticles">{itemsTotal}</div>
-                            </div>
-                    </div>
+                    <div className="totalArticles"><p>Cantidad total de productos={itemsTotal}</p></div>
                 </>
             )
             

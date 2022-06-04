@@ -1,0 +1,25 @@
+.itemCompra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 2%;
+}
+.button {
+    width: 40px;
+}
+.datosItem1 {
+    display: flex;
+    justify-content: space-between;
+}
+.datosItem2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+.datosItem3 {
+    display:flex;
+    justify-content: space-between;
+}
