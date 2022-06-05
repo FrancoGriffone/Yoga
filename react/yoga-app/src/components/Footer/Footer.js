@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.css";
+import "./style.css";
 import Yoga from "./files/yoga.png"
 import Facebook from "./files/facebook.png"
 import Instagram from "./files/instagram.png"

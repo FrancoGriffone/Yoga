@@ -5,10 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import ItemCount from './ItemCount';
-import { Context } from '../../../Context/Context';
+import ItemCount from '../ItemCount/ItemCount';
+import { Context } from '../../Context/Context';
 import { Link, useParams } from 'react-router-dom';
-import { Data } from '../../../data/Data';
+import { Data } from '../../data/Data';
 
 export const ItemDetail = ({
   title,
@@ -56,8 +56,15 @@ export const ItemDetail = ({
           </CardActionArea>
         </Card>
         {comprado ? (
-          <Link className='addCarrito' to="/cart">Ver otros productos</Link>
-        ) : (
+          <>
+          <div>
+            <h5 className='addCarrito'>Producto agregado al carrito</h5>
+          </div>
+          <div className='buttonsItemDetail'>
+            <div><Link className="verCarrito" to="/cart">Ver mi carrito</Link></div>
+            <div><Link className="verProductos" to="/">Ver otros productos</Link></div>
+          </div>
+          </>) : (
           <ItemCount stock={stock} initial={1} onAdd={onAdd} />
         )}
         </div>

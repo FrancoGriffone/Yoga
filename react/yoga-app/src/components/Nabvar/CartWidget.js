@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Carrito from "./files/carrito.png"
-import Cart from "../Secciones/productos/Cart/Cart"
+import Cart from "../Cart/Cart"
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
