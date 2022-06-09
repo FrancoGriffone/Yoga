@@ -1,25 +1,13 @@
-import React from 'react';
-import './style.css';
+import * as React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
+const Loader = () => {
+	return (
+		<Box sx={{ display: 'flex', margin: "20%", justifyContent: "center"}}>
+			<CircularProgress />
+		</Box>
+	);
+};
 
-const Loader = ( ) => {
-
-    return (
-        <>
-            <div className="spinner-box">
-                <div className="configure-border-1">  
-                    <div className="configure-core"></div>
-                </div>  
-
-                <div className="configure-border-2">
-                    <div className="configure-core"></div>
-                </div> 
-            </div>
-
-        </>
-    )
-
-
-}
-
-export default Loader
+export default Loader;

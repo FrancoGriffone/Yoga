@@ -10,13 +10,16 @@ const ItemCount = ({ stock, initial, onAdd}) =>{
   
   return (
     <>
-      <button onClick={() => counter > initial && setCounter(counter - 1)}>
+    <div className='button'>
+      <Button onClick={() => counter > initial && setCounter(counter - 1)}>
         -
-      </button>
-      {counter}
-      <button onClick={() => counter < stock && setCounter(counter + 1)}>
+      </Button>
+      <p> {counter} </p>
+      <Button onClick={() => counter < stock && setCounter(counter + 1)}>
         +
-      </button>
+      </Button>
+    </div>
+      
 
       <Button onClick={() => onAdd(counter)}>Agregar al carrito</Button>
     </>
