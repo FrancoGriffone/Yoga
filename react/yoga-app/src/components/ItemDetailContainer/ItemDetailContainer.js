@@ -1,28 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { useParams } from 'react-router-dom';
 // FIRBASE - FIRESTORE
-import { collection, query, getDocs } from 'firebase/firestore';
+import { collection, doc, getDoc } from 'firebase/firestore';
 import { db } from '../../Firebase/FirebaseConfig';
 
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  const { itemId } = useParams();
 
   useEffect(() => {
+    
     const getItems = async () => {
-    const q = query(collection(db, "cursos"))
-    const docs = [];
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      docs.push({ ...doc.data(), id: doc.id });
-      });
-      setProduct(docs)
-      console.log (docs)
-    }
-    getItems()
-  }, 
-  [])
+      const q = doc(collection(db, "cursos"), itemId);
+      const querySnapshot = await getDoc(q);
+      setProduct({ ...querySnapshot.data(), id: querySnapshot.id });
+    };
+    getItems();
+    setTimeout (() => {
+      setLoading (false)
+    }, 1000);
+  }, []);
 
-  return <ItemDetail {...product} />;
+  return loading ? <h2>Cargando datos...</h2> : <ItemDetail {...product} />;
 }
 
 
