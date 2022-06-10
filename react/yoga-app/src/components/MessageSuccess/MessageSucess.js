@@ -4,11 +4,13 @@ import Stack from '@mui/material/Stack';
 
 const MessageSuccess = ({ purchaseID }) => {
 	return (
-		<Stack sx={{ width: '100%' }} spacing={2}>
-			<Alert severity='success'>
-				Gracias por su compra! su id de transacción es: {purchaseID}
-			</Alert>
-		</Stack>
+		<div style={{ display: "flex", justifyContent: "center", marginBottom: "3%"}}>
+			<Stack sx={{ width: '50%' }} spacing={2}>
+				<Alert severity='success'>
+					Gracias por su compra! su id de transacción es: {purchaseID}
+				</Alert>
+			</Stack>
+		</div>
 	);
 };
 

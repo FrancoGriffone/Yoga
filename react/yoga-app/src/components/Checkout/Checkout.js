@@ -1,11 +1,9 @@
-import './Checkout.css'
 import React,  { useContext } from "react"; 
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { Context } from '../../Context/Context';
-import { collection, addDoc } from 'firebase/firestore';
-import { getFirestore } from '../../firebase';
-import Loader from "../Loader/Loader.jsx";
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
+import Loader from '../Loader/Loader';
 
 const Checkout = () => {
 

@@ -14,12 +14,12 @@ export const ItemDetailContainer = () => {
 
   useEffect(() => {
     
-    const getItems = async () => {
+    const getItem = async () => {
       const q = doc(collection(db, "cursos"), itemId);
       const querySnapshot = await getDoc(q);
       setProduct({ ...querySnapshot.data(), id: querySnapshot.id });
     };
-    getItems();
+    getItem();
     setTimeout (() => {
       setLoading (false)
     }, 1000);
@@ -27,5 +27,3 @@ export const ItemDetailContainer = () => {
 
   return loading ? <Loader /> : <ItemDetail {...product} />;
 }
-
-{/* <h2>Cargando datos...</h2> */}

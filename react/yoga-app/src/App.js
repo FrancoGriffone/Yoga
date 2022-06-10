@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 /*Components*/
 import Navbar from './components/Nabvar/Navbar';
 import Home from "./components/Home/Home"
+import Shop from './components/Checkout/Shop';
 import Cart from "./components/Cart/Cart"
 import {ItemListContainer} from "./components/ItemListContainer/ItemListContainer"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
@@ -24,6 +25,7 @@ export default function App() {
       <Navbar />
       <Home />
       <Routes>
+        <Route path="/checkout" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/product/:itemId" element={<ItemDetailContainer />} />

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import "./style.css"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -8,7 +8,10 @@ import { CardActionArea } from '@mui/material';
 import ItemCount from '../ItemCount/ItemCount';
 import { Context } from '../../Context/Context';
 import { Link, useParams } from 'react-router-dom';
-import { Data } from '../../data/Data';
+// FIRBASE - FIRESTORE
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { db } from '../../Firebase/FirebaseConfig';
+import Success from './Success';
 
 export const ItemDetail = ({
   title,
@@ -19,14 +22,23 @@ export const ItemDetail = ({
   price
 }) => {
   const [comprado, setComprado] = useState(false);
+  const [product, setProduct] = useState({});
 
   const {addItemToCart} = useContext(Context);
 
   const { itemId } = useParams();
+  
+  useEffect(() => {
+    
+    const getItem = async () => {
+      const q = doc(collection(db, "cursos"), itemId);
+      const querySnapshot = await getDoc(q);
+      setProduct({ ...querySnapshot.data(), id: querySnapshot.id });
+    };
+    getItem();
+  }, [product]);
 
-  const myData = Data.find((item) => item.id === itemId);
-
-  const items = myData
+  const items = product
 
   const onAdd = (value) => {
       addItemToCart(items, value)
@@ -58,7 +70,7 @@ export const ItemDetail = ({
         {comprado ? (
           <>
           <div>
-            <h5 className='addCarrito'>Producto agregado al carrito</h5>
+            <Success />
           </div>
           <div className='buttonsItemDetail'>
             <div><Link className="verCarrito" to="/cart">Ver mi carrito</Link></div>

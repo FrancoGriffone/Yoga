@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
+import "./style.css"
 
 // Firebase
 import { collection, addDoc } from 'firebase/firestore';
-import { db } from '../../firebase/firebaseConfig';
+import { db } from '../../Firebase/FirebaseConfig';
 
 import TextField from '@mui/material/TextField';
 
-import MessageSuccess from '../../components/MessageSuccess/MessageSuccess';
-
-import './Shop.css';
+import MessageSuccess from "../MessageSuccess/MessageSucess";
 
 const styles = {
 	containerShop: {
@@ -18,9 +17,10 @@ const styles = {
 };
 
 const initialState = {
-	name: '',
-	lastName: '',
-	city: '',
+	nombre: "",
+	apellido: "",
+	email: "",
+	telefono: "",
 };
 
 const Shop = () => {
@@ -46,30 +46,37 @@ const Shop = () => {
 
 	return (
 		<div style={styles.containerShop}>
-			<h1>Shop</h1>
+			<h1>Completa los datos para finalizar la compra</h1>
 			<form className='FormContainer' onSubmit={onSubmit}>
 				<TextField
-					placeholder='Name'
+					placeholder='Nombre'
 					style={{ margin: 10, width: 400 }}
-					name='name'
-					value={values.name}
+					name='Nombre'
+					value={values.nombre}
 					onChange={handleOnChange}
 				/>
 				<TextField
-					placeholder='Last Name'
+					placeholder='Apellido'
 					style={{ margin: 10, width: 400 }}
-					name='lastName'
-					value={values.lastName}
+					name='Apellido'
+					value={values.apellido}
 					onChange={handleOnChange}
 				/>
 				<TextField
-					placeholder='City'
+					placeholder='Email'
 					style={{ margin: 10, width: 400 }}
-					name='city'
-					value={values.city}
+					name='Email'
+					value={values.email}
 					onChange={handleOnChange}
 				/>
-				<button className='btnASendAction'>Send</button>
+				<TextField
+					placeholder='Teléfono'
+					style={{ margin: 10, width: 400 }}
+					name='Teléfono'
+					value={values.telefono}
+					onChange={handleOnChange}
+				/>
+				<button className='btnASendAction'>Finalizar compra</button>
 			</form>
 			{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
 		</div>
