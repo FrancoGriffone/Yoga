@@ -35,9 +35,9 @@ Uso de React Router Dom para la navegación;
 Uso de FireBase para persistencia de datos;
 Uso de MUI y Bootstrap para mejor calidad y diseño de elementos.
 
-## Gift de Muestra
+## Muestra
 
-![Alt Text](/src/assets/EosGift.gif)
+![Alt Text](/src/files/gifNamaste.gif)
 
 
 ### Autor
