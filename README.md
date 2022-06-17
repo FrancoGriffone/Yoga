@@ -37,7 +37,7 @@ Uso de MUI y Bootstrap para mejor calidad y diseño de elementos.
 
 ## Muestra
 
-![Alt Text](/src/files/gifNamaste.gif)
+![Alt Text](/react/yoga-app/src/files/gifNamaste.gif)
 
 
 ### Autor
