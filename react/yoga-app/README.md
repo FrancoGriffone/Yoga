@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Namasté
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Namasté es un sitio que permite la adquisición de cursos de Yoga, teniendo varias temáticas.
 
-## Available Scripts
+La web cuenta con un diseño simple e intutivo que permite navegar por el Home, encontrado rápidamente los productos. Así mismo, los productos tienen una vista individual que permite ver una descripción más amplia del contenido del mismo. En dicha vista, se podrá acceder a la adquisición del producto en el carrito de compra, el cual podrá visualizarse inmediatamente después de dicha adquisición o bien de manera posterior en el vértice superior del lateral derecho (con la imagen de una bolsa de compra), o bien volver al menú en donde se mostrarán todos los productos de la web.
+El carrito se irá actualizando a medida que sumemos distintos elementos al mismo (el stock es a los fines prácticos, dado que son cursos y la adquisión de más de 1 elemento por curso no tendría sentido), contando con la posibilidad de eliminar parcial o totalmente el contenido del carrito.
+Desde el mismo elemento Cart o carrito de compras, se podrá acceder al Checkout a los fines de concretar la compra. Previamente en el carrito, se podrá visualizar todo lo referente al monto individual por producto y el total del mismo debajo. Completando con los datos del usuario se accede al ID de pedido que figurará por debajo del formulario de compra.
+Todos los datos de la compra, así como los productos que figuran en la página, se almacenan en la base de datos de Firebase.
 
-In the project directory, you can run:
+## Instalación
 
-### `npm start`
+1. Forkeá y cloná el repositorio
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Parado en la raíz del proyecto corré el comando 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```
+   npm install
+   ```
 
-### `npm test`
+    para instalar todas las dependecias del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Usá 
 
-### `npm run build`
+   ```
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    para correr el proyecto, que estará disponible en http://localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Dependencias
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Uso de React Router Dom para la navegación;
+Uso de FireBase para persistencia de datos;
+Uso de MUI y Bootstrap para mejor calidad y diseño de elementos.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Muestra
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Alt Text](/src/files/gifNamaste.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Autor
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Franco Griffone
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2022 - Curso de React en CoderHouse
